@@ -1,25 +1,23 @@
-name: UnitTest
+name: Python unitTest
 
+name: Python unittests
 on:
   push:
-    branches: [main, master, dev]
   pull_request:
-    branches: [main, master, dev]
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Git Checkout
-        uses: actions/checkout@v3
+    - name: Repository letöltése
+      uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.12"
+    - name: Python telepítése
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
 
-      - name: Run Tests
-        run: |
-          python -m unittest app.py
-
+    - name: Unittestek futtatása
+      run: |
+        python -m unittest discover
