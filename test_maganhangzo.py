@@ -2,9 +2,10 @@ import unittest
 
 
 def maganhangzot_torol(szoveg: str) -> str:
-    # Magyar és angol magánhangzók
-    maganhangzok = "aeiouAEIOUáÁéÉíÍóÓöÖőŐúÚüÜűŰ"
+    # Csak az 'a' és magyar ékezetes magánhangzók törlése
+    maganhangzok = "aAáÁeEéÉiIíÍoOóÓöÖőŐuUúÚüÜűŰ"
     return "".join(karakter for karakter in szoveg if karakter not in maganhangzok)
+
 
 
 class TestMaganhangzoTorol(unittest.TestCase):
