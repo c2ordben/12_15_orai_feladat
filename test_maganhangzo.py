@@ -2,9 +2,9 @@ import unittest
 
 
 def maganhangzot_torol(szoveg: str) -> str:
-    # Magyar magánhangzók, de az 'e' NEM törlődik
-    maganhangzok = "aAáÁiIíÍoOóÓöÖőŐuUúÚüÜűŰ"
+    maganhangzok = "aAáÁeEiIíÍoOóÓöÖőŐuUúÚüÜűŰ"
     return "".join(karakter for karakter in szoveg if karakter not in maganhangzok)
+
 
 
 
