@@ -2,7 +2,8 @@ import unittest
 
 
 def maganhangzot_torol(szoveg: str) -> str:
-    maganhangzok = "aeiouAEIOU"
+    # Magyar és angol magánhangzók
+    maganhangzok = "aeiouAEIOUáÁéÉíÍóÓöÖőŐúÚüÜűŰ"
     return "".join(karakter for karakter in szoveg if karakter not in maganhangzok)
 
 
@@ -17,7 +18,7 @@ class TestMaganhangzoTorol(unittest.TestCase):
     def test_szokoz_es_irasjelek(self):
         self.assertEqual(
             maganhangzot_torol("Ez egy teszt mondat."),
-            "z ny tszt mndt."
+            "z gy tszt mndt."
         )
 
     def test_szamok_es_egyeb(self):
