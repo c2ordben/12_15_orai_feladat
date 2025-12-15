@@ -1,12 +1,9 @@
 import unittest
 
-
 def maganhangzot_torol(szoveg: str) -> str:
+    # Magyar magánhangzók (az 'e' és 'E' is törlődik!)
     maganhangzok = "aAáÁeEiIíÍoOóÓöÖőŐuUúÚüÜűŰ"
     return "".join(karakter for karakter in szoveg if karakter not in maganhangzok)
-
-
-
 
 
 class TestMaganhangzoTorol(unittest.TestCase):
