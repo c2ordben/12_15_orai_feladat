@@ -6,10 +6,6 @@ def armstrong(num:int)->bool:
     total = sum(int(digit) ** n for digit in digits)
     return total == num
 
-
-
-
-
 class TestFibo(unittest.TestCase):
         def test_armstrong_true(self):
             self.assertTrue(armstrong(153))
